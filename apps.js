@@ -1,10 +1,28 @@
 
-var audio = new Audio('beep.mp3');
+function start() {
+   document.getElementById('timer').innerHTML =
+   07 + ":" + 00;
+ startTimer(); }
 
-for (let i = 0; i <= 10; i++){       
-     setTimeout(function () {   
-        console.log(i);
-        
-     }, i*6000)
- }
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  if(m<0){
+    return start();
+  }
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  console.log(m)
+  setTimeout(startTimer, 1000);
+  
+}
 
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}

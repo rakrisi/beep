@@ -13,13 +13,14 @@ margin-top: 50%;
 <body>
 
 <div id="app">
-  <center><button id="gg" v-on:click="start" type="button">Click Me to Play Sound</button></center>
+  <center><button onclick="start()" id="gg" v-on:click="start" type="button">Click Me to Play Sound</button></center>
   <h3>question number :{{ ques}} </h3>
+  <div>Time left = <span id="timer"></span></div>
   <audio ref="audioElm" src="beep.mp3"></audio>
 </div>
 
 <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
-<!-- <script src="app.js"></script> -->
+ <script src="apps.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
