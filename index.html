@@ -4,12 +4,17 @@
   <meta charset="utf-8">
   <title>Vue.js Play Audio Sound Onclick Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #gg{
+margin-top: 50%;
+    }
+  </style>
 </head>
 <body>
 
 <div id="app">
-  <button v-on:click="start" type="button">Click Me to Play Sound</button>
-  
+  <center><button id="gg" v-on:click="start" type="button">Click Me to Play Sound</button></center>
+  <h3>question number :{{ ques}} </h3>
   <audio ref="audioElm" src="beep.mp3"></audio>
 </div>
 
