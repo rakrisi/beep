@@ -5,7 +5,7 @@ var app = new Vue({
   data:
   {
  q:'10',
- t:'10000',
+ t:'420000',
 
   },
   methods: {
